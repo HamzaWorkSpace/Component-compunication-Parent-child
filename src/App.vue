@@ -44,13 +44,18 @@
     </b-container>
 
     <ul>
-      <li v-for="friends in friendsList" :key="friends.name">
-            <friend-contact
-            :friend-name="friends.name"
-            :friend-email="friends.email"
-            :friend-phone="friends.fPhone"
-          />
-      </li>
+      <span v-if="friendsList.length > 0">
+        <li v-for="friends in friendsList" :key="friends.name">
+              <friend-contact
+              :friend-name="friends.name"
+              :friend-email="friends.email"
+              :friend-phone="friends.phone"
+            />
+        </li>
+      </span>
+      <div style="margin-left:43.55%" v-else>
+        Your Friend list is empty.
+      </div>
     </ul>
   </section>
 </template>
