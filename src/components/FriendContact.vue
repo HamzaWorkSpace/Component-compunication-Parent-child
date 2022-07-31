@@ -1,5 +1,5 @@
 <template>
-  <li>
+  
     <h2>{{ friendName }}</h2>
     <button @click="toggleDetails">{{ detailsAreVisible ? 'Hide' : 'Show' }} Details</button>
     <ul v-if="detailsAreVisible">
@@ -12,7 +12,7 @@
         {{ friendEmail }}
       </li>
     </ul>
-  </li>
+ 
 </template>
 
 <script>
